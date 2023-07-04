@@ -1413,7 +1413,7 @@
                  "y":2370.8335
                 }, 
                 {
-                 "height":151.833,
+                 "height":157.333,
                  "id":49,
                  "name":"jitsiMeetingRoomFour",
                  "properties":[
@@ -1440,12 +1440,12 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":375,
-                 "x":420.5,
-                 "y":3011.8335
+                 "width":379,
+                 "x":418,
+                 "y":3008.8335
                 }, 
                 {
-                 "height":87.3330000000001,
+                 "height":93.3330000000001,
                  "id":50,
                  "name":"jitsiMeetingRoomChill",
                  "properties":[
@@ -1482,9 +1482,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":409.5,
-                 "x":835,
-                 "y":3076.3335
+                 "width":413,
+                 "x":833,
+                 "y":3074.3335
                 }, 
                 {
                  "height":62,
@@ -1512,6 +1512,57 @@
                  "width":94,
                  "x":673,
                  "y":2210
+                }, 
+                {
+                 "height":222,
+                 "id":52,
+                 "name":"silentZone",
+                 "properties":[
+                        {
+                         "name":"silent",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":225,
+                 "x":1024.5,
+                 "y":2401.5
+                }, 
+                {
+                 "height":159,
+                 "id":53,
+                 "name":"silentZone",
+                 "properties":[
+                        {
+                         "name":"silent",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":227,
+                 "x":1024.5,
+                 "y":2720.5
+                }, 
+                {
+                 "height":29.84375,
+                 "id":57,
+                 "name":"",
+                 "rotation":0,
+                 "text":
+                    {
+                     "fontfamily":"Verdana",
+                     "pixelsize":18,
+                     "text":"Regionaal energieloket"
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":249.901041666667,
+                 "x":958.549479166667,
+                 "y":2154.91145833333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1752,7 +1803,7 @@
          "y":0
         }],
  "nextlayerid":67,
- "nextobjectid":52,
+ "nextobjectid":58,
  "orientation":"orthogonal",
  "properties":[
         {
