@@ -1,6 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
-import { CoWebsite, Popup } from "@workadventure/iframe-api-typings";
+import { CoWebsite } from "@workadventure/iframe-api-typings";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
@@ -14,7 +14,6 @@ WA.onInit().then(() => {
 
     let gameWebsite: CoWebsite
     let popup: any
-    console.log(WA.state.config)
 
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
@@ -40,9 +39,6 @@ WA.onInit().then(() => {
     })
 
     WA.room.area.onEnter('jitsiMeetingRoomChill').subscribe(async() => {
-        console.log(WA.state.urlGame)
-        console.log(WA.state.hasVariable('urlGame'))
-
         gameWebsite = await WA.nav.openCoWebSite(WA.state.hasVariable('urlGame') ? WA.state.loadVariable('urlGame') as string : 'https://skribbl.io', true,  "", 50, 1, false, true)
     })
 
