@@ -3,6 +3,9 @@
 import { CoWebsite } from "@workadventure/iframe-api-typings";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
+// // Calling bootstrapExtra will initiliaze all the "custom properties"  
+// bootstrapExtra();
+
 console.log('Script started successfully');
 
 let currentPopup: any = undefined;
@@ -12,8 +15,8 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
-    let gameWebsite: CoWebsite
-    let popup: any
+    // let gameWebsite: CoWebsite
+    // let popup: any
 
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
@@ -24,29 +27,30 @@ WA.onInit().then(() => {
     WA.room.area.onLeave('clock').subscribe(closePopup)
     
 
-    WA.room.area.onEnter('UpdateGame').subscribe(async() => {
-        popup = WA.ui.openPopup('UpdateGame', 'Type the url to the website to be opened in your chat!',  [])
+    // WA.room.area.onEnter('UpdateGame').subscribe(async() => {
+    //     popup = WA.ui.openPopup('UpdateGame', 'Type the url to the website to be opened in your chat!',  [])
         
-        WA.chat.onChatMessage((message => {
-            WA.state.urlGame = message            
-        }));
-    })
+    //     WA.chat.onChatMessage((message => {
+    //         WA.state.urlGame = message            
+    //     }));
+    // })
 
-    WA.room.area.onLeave('UpdateGame').subscribe(async() => {
-        if(popup) {
-            popup.close()
-        }
-    })
+    // WA.room.area.onLeave('UpdateGame').subscribe(async() => {
+    //     if(popup) {
+    //         popup.close()
+    //     }
+    // })
 
-    WA.room.area.onEnter('jitsiMeetingRoomChill').subscribe(async() => {
-        gameWebsite = await WA.nav.openCoWebSite(WA.state.hasVariable('urlGame') ? WA.state.loadVariable('urlGame') as string : 'https://skribbl.io', true,  "", 50, 1, false, true)
-    })
+    // WA.room.area.onEnter('jitsiMeetingRoomChill').subscribe(async() => {
+    //     console.log(WA.state)
+    //     gameWebsite = await WA.nav.openCoWebSite(WA.state.hasVariable('urlGame') ? WA.state.loadVariable('urlGame') as string : 'https://skribbl.io', true,  "", 50, 1, false, true)
+    // })
 
-    WA.room.area.onLeave('jitsiMeetingRoomChill').subscribe(async() => {
-        if(gameWebsite) {
-            gameWebsite.close()
-        }
-    })
+    // WA.room.area.onLeave('jitsiMeetingRoomChill').subscribe(async() => {
+    //     if(gameWebsite) {
+    //         gameWebsite.close()
+    //     }
+    // })
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
