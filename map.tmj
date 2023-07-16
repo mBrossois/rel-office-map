@@ -1836,6 +1836,11 @@
                          "name":"default",
                          "type":"string",
                          "value":"https:\/\/skribbl.io\/"
+                        }, 
+                        {
+                         "name":"persistent",
+                         "type":"bool",
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"variable",
