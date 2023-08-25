@@ -1958,6 +1958,24 @@
                  "width":190.666666666667,
                  "x":0.666666666666703,
                  "y":3006.66666666666
+                }, 
+                {
+                 "height":0,
+                 "id":89,
+                 "name":"raceStats",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":112.666666666667,
+                 "y":3108
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1992,24 +2010,6 @@
                  "width":0,
                  "x":976.545454545454,
                  "y":3119.63636363636
-                }, 
-                {
-                 "height":0,
-                 "id":81,
-                 "name":"raceStats",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":106,
-                 "y":3110
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2250,7 +2250,7 @@
          "y":0
         }],
  "nextlayerid":72,
- "nextobjectid":89,
+ "nextobjectid":90,
  "orientation":"orthogonal",
  "properties":[
         {
