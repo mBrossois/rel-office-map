@@ -105,10 +105,12 @@ function setupFinishArea() {
                 const userIndex = stats.findIndex(stat => stat.name === WA.player.name)
                 if(userIndex >= 0 && stats[userIndex].time > finishedTime) {
                     stats[userIndex].time = finishedTime
+                    WA.state.saveVariable('raceStats', [])
                     WA.state.saveVariable('raceStats', stats)
 
                 } else if(userIndex < 0) {
                     stats.push({ name: WA.player.name, time: finishedTime })
+                    WA.state.saveVariable('raceStats', [])
                     WA.state.saveVariable('raceStats', stats)
                 }
 
