@@ -1,6 +1,7 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import setupRace from "./utils/race";
 
 console.log('Script started successfully');
 
@@ -17,10 +18,13 @@ WA.onInit().then(() => {
     })
 
     WA.room.area.onLeave('clock').subscribe(closePopup)
+
+    setupRace();
     
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
+
     }).catch(e => console.error(e));
 
 }).catch(e => console.error(e));
@@ -31,5 +35,4 @@ function closePopup(){
         currentPopup = undefined;
     }
 }
-
 export {};
