@@ -10,8 +10,6 @@ export default function setupRace() {
    setupFinishArea()
    numberOfCheckPointsOpen()
    setupStats()
-   const stats = WA.state.loadVariable('raceStats')
-    console.log('stats', stats)
 }
 
 function startRace() {
@@ -184,7 +182,6 @@ function getButton(stats: Array<{name: string, time: number}>, page: number): Bu
             }
         })
     }
-    console.log(stats.length)
     if(page < Math.round(stats.length / 3) - 1 ) {
         buttons.push({
             label: "Volgende", className: "normal", callback: (popup) => {
