@@ -4,9 +4,7 @@ export interface RaceType{
     state: string;
     timer: number;
     checkpoints: {
-        checkpointOne: boolean;
-        checkpointTwo: boolean;
-        checkpointThree: boolean;
+        [key: string]: boolean
     }
     roomCheckPointState: {
         value?: ActionMessage;
