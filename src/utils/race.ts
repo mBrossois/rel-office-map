@@ -3,6 +3,7 @@ import { RaceType } from "../types"
 
 const raceValues: RaceType = {state: 'init', timer: 0, roomCheckPointState: {}, roomStartState: { timer: 3}, checkpoints: { checkpointOne: false, checkpointTwo: false, checkpointThree: false }, roomFinishState: {}}
 let counterInterval: any
+let resultValue: Popup
 
 export default function setupRace() {
    setupStartArea()
@@ -180,7 +181,7 @@ function getButton(stats: Array<{name: string, time: number}>, page: number): Bu
         buttons.push({
             label: "Vorige", className: "normal", callback: (popup: Popup) => {
                 popup.close()
-                openPopupStats(stats, page - 1)
+                resultValue = openPopupStats(stats, page - 1)
             }
         })
     }
@@ -188,7 +189,7 @@ function getButton(stats: Array<{name: string, time: number}>, page: number): Bu
         buttons.push({
             label: "Volgende", className: "normal", callback: (popup) => {
                 popup.close()
-                openPopupStats(stats, page + 1)
+                resultValue = openPopupStats(stats, page + 1)
             }
         })
     }
@@ -202,7 +203,6 @@ function openPopupStats(stats: Array<{name: string, time: number}>, page: number
 }
 
 function setupStats() {
-    let resultValue: Popup
     WA.room.area.onEnter('results').subscribe(() => {
         const stats = WA.state.loadVariable('raceStats') as Array<any> | undefined
         
