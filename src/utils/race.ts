@@ -184,7 +184,7 @@ function getButton(stats: Array<{name: string, time: number}>, page: number): Bu
             }
         })
     }
-    if(page < Math.round(stats.length / 3) - 1 ) {
+    if(page < stats.length / 3 - 1 ) {
         buttons.push({
             label: "Volgende", className: "normal", callback: (popup) => {
                 popup.close()
